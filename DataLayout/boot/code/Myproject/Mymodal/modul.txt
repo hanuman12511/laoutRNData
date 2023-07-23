@@ -1,0 +1,11 @@
+1.app/code/Myproject/Mymodal/etc/module.xml
+2.app/code/Myproject/Mymodal/composer.json
+3.app/code/Myproject/Mymodal/registration.php
+step4:
+php bin/magento modul:status
+php bin/magento module:enable Myproject_Mymodal
+php bin/magento module:status Myproject_Mymodal
+php bin/magento setup:upgrade && php bin/magento setup:static-content:deploy -f && php bin/magento c:f
+
+
+php bin/magento setup:upgrade && php bin/magento setup:di:compile && php bin/magento cache:flush

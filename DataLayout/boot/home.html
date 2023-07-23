@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <style>
+.main{
+    width: 100%;
+    height: auto;
+    background-color: aqua;
+}
+.main div{
+    width: 300px;
+    height: 200px;
+   
+    transition:  2s;
+}
+.d1, .d2{
+    position:absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.d1 {
+    display: block;
+    background-color: brown;
+}
+.d2 {
+    display: none;
+    background-color: rgb(6, 236, 206);
+}
+.main div:hover .d1 {
+  display: none;
+ 
+}
+
+
+.main div:hover+.d2 {
+display: block;
+border-radius: 30px;
+  transform: rotateZ(360deg);
+}
+
+
+
+    </style>
+    <div class="main">
+        <div class="d1">
+            <h1>disp-1</h1>
+        </div>
+        <div class="d2">
+            <h1>disp-2</h1>
+        </div>
+
+    </div>
+</body>
+</html>
